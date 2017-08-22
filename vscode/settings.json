@@ -1,0 +1,19 @@
+{
+  "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "files.associations": {
+      "*.podspec": "ruby",
+      "Podfile": "ruby",
+      "Vagrantfile": "ruby"
+    },
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
+    "materialTheme.cache.workbench.settings": {
+      "themeColours": "Darker",
+      "accentPrevious": "Blue"
+    },
+    "workbench.colorTheme": "Material Theme",
+    "workbench.colorCustomizations": {}
+  }
