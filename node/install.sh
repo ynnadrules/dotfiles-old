@@ -1,4 +1,4 @@
-if test ! $(which nvm)
+if test ! $(which node)
 then
   echo "Installing a stable version of Node..."
 

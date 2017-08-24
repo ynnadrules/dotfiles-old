@@ -1,0 +1,5 @@
+[user]
+        name = Danny Ruiz
+        email = ynnadrules@gmail.com
+[credential]
+        helper = osxkeychain

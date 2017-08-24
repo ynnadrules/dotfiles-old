@@ -4,6 +4,6 @@ then
 
   for jdk in $(ls -d /Library/Java/JavaVirtualMachines/jdk*.jdk); do
     echo "\tAdding ${jdk}..."
-    jenv add $jdk/Contents/Home/
+    /usr/local/bin/jenv add $jdk/Contents/Home/
   done
 fi
