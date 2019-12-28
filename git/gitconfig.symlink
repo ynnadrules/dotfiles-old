@@ -15,7 +15,7 @@
         branch = auto
         ui = true
 [core]
-	excludesfile = /Users/neural/.gitignore
+	excludesfile = $HOME/.gitignore
         editor = vim
 [apply]
         whitespace = nowarn
@@ -41,4 +41,8 @@
 	name = Danny Ruiz
 	email = ynnadrules@gmail.com
 [commit]
-	template = /Users/neural/.stCommitMsg
+	template = $HOME/.stCommitMsg
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+[url "git@github.com:"]
+	insteadOf = https://github.com/

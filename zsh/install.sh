@@ -1,5 +1,6 @@
 
 #!/usr/bin/env bash
+
 # Test to see if zshell is installed.  If it is:
 if [ -f /usr/local/bin/zsh ]; then
   export ZSH="$HOME/.oh-my-zsh"
@@ -24,6 +25,11 @@ if [ -f /usr/local/bin/zsh ]; then
 else
   echo "You need to: brew install zsh"
 fi
+
+ZSH_DOTFILE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+
+
 
 
 

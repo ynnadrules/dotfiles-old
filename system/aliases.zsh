@@ -1,14 +1,3 @@
-# grc overides for ls
-#   Made possible through contributions from generous benefactors like
-#   `brew install coreutils`
-if $(gls &>/dev/null)
-then
-  alias ls="gls -F --color"
-  alias l="gls -lAh --color"
-  alias ll="gls -l --color"
-  alias la='gls -A --color'
-fi
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -78,14 +67,17 @@ fi
 
 export CLICOLOR_FORCE=1
 
-# List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+#List all files colorized in long format
+alias l="gls -lF ${colorflag}"
 
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
-alias ls='ls -AFh ${colorflag} --group-directories-first'
+alias ls='gls -AFh ${colorflag} --group-directories-first'
+
+# ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes, list mode
+alias ll='gls -lAFh ${colorflag} --group-directories-first'
 
 # List all files colorized in long format, including dot files
-alias la="ls -la ${colorflag}"
+alias la="gls -la ${colorflag}"
 
 # List only directories
 alias lsd='gls -l | grep "^d"'
@@ -142,7 +134,7 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 
 # zshrc config
-alias zconfig="${EDITOR} ~/.zshrc}"
+alias zconfig="${EDITOR} ~/.zshrc"
 alias reload="source ~/.zshrc && echo 'Shell config reloaded from ~/.zshrc'"
 
 # zsh.local config

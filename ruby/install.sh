@@ -1,9 +1,8 @@
 # TODO: check if system has other ruby than system ruby
-if false
+if (( $+commands[rbenv] )) && [ `rbenv versions | wc -l | tr -d ' '` == 1 ]
 then
-  echo "Installing ruby 2.4.1"
-
-  rbenv install 2.4.1
+  echo "Installing latest stable Ruby"
+  rbenv install $(rbenv install -l | grep -v - | tail -1 | tr -d '[[:space:]]')
 fi
 
 exit 0
